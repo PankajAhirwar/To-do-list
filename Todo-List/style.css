@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(#ffd55c 50%,#5a95ff 50%);
+}
+.app{
+    font-family: 'Times New Roman', Times, serif;
+    width: min(95vw,31.25em);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1.875rem;
+}
+.container{
+    padding:2em;
+    background-color: aliceblue;
+    box-shadow: 0 1em 20em rgba(0,0,0, 0.6);
+    border-radius: 8px;
+}
+
+#wrap{
+    position: relative;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 2em;
+}
+
+#wrap input{
+    border: none;
+    background-color: transparent ;
+    padding: 1em 0.5em;
+    font-size: 0.9em;
+    width: 100%;
+    color: black;
+    border-bottom: 2px solid #d1d2d3;
+
+}
+#wrap input:focus{
+    outline: none;
+    border-color: #5a95ff;
+}
+
+#wrap #btn{
+    border-radius: 0.5em;
+    font-weight: 500px;
+    background-color: rgb(5, 50, 50);
+    outline: none;
+    border: none;
+    color: azure;
+    cursor: pointer;
+    font-size: 1.2em;
+    
+}
+
+#Task{
+    position: relative;
+    margin-top: 1em;
+    padding: 1em 0.5em;
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+.task{
+    background-color: #ebe2e2;
+    padding: 0.8em 1em;
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr 2fr;
+    gap:1em;
+    border-radius:0.4em;
+    box-shadow: 0 0.5em 1em rgba(0,0,0, 0.05);
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.task:not(:first-child){
+    margin-top: 1em;
+}
+
+.task input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #cfc8c8 ;
+}
+
+.task input[type="checkbox"]:before{
+    content: "";
+    position:absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+.task input[type="checkbox"]:checked {
+    background-color: #5a95ff;
+    border-color: #5a95ff;
+}
+
+.task input[type="checkbox"]:checked::before{
+    position: absolute;
+    content: "\f00c";
+    color: #ffffff;
+    font-size: 0.8em;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.task span{
+    font: 0.9em;
+    font-weight: 400;
+    word-break: break-all;
+}
+
+.task button{
+    color: #ffffff;
+    width: 100%;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.edit{
+    background-color: #5a95ff;
+}
+
+.delete{
+    background-color: #ff5c5c;
+}
+#padding-Task span{
+    color: #5a95ff;
+}
+.completed{
+    text-decoration: line-through;
+    color: rgba(18, 143, 174, 0.564);
+}
+
+#error{
+    text-align: center;
+    background-color: #dae0e6;
+    margin: 1.2em;
+    padding: 1em;
+    color: red;
+    font-weight: bold;
+    border-radius: 0.6em;
+    display: none;
+}
